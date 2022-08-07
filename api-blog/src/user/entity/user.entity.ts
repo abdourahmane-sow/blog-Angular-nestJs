@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class userEntity {
@@ -8,6 +8,17 @@ export class userEntity {
   @Column()
   name: string;
 
-  @Column({unique:true})
+  @Column({ unique: true })
   username: string;
+
+  @Column()
+  email: string;
+
+  @Column()
+  password: string;
+
+  @BeforeInsert()
+  emailToLowerCase() {
+    this.email = this.email.toLocaleLowerCase();
+  }
 }

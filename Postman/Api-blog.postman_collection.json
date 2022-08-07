@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\":\"wos99\",\n    \"name\": \"Mansour\"\n}",
+					"raw": "{\n    \"username\":\"wos99\",\n    \"name\": \"Mansour\",\n    \"email\": \"mansour@mansour.com\",\n    \"password\": \"mansour\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -48,14 +48,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/users/4",
+					"raw": "localhost:3000/users/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"users",
-						"4"
+						"1"
 					]
 				}
 			},
@@ -105,14 +105,42 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/users/4",
+					"raw": "localhost:3000/users/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"users",
-						"4"
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"mansour@mansour.com\",\n    \"password\":\"mansour\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
 					]
 				}
 			},
